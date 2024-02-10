@@ -133,7 +133,7 @@ const OTP = ({ email, name, otpVerified, setOtpVerified, reason }) => {
   };
   const sendOtp = async () => {
     const res = await axios.get(
-      `http://localhost:3000/api/auth/generateotp?email=${email}&name=${name}&reason=${reason}`
+      `https://castwave-api-podcast.onrender.com/api/auth/generateotp?email=${email}&name=${name}&reason=${reason}`
     );
     // console.log(res);
     if (res.status === 200) {
@@ -165,7 +165,7 @@ const OTP = ({ email, name, otpVerified, setOtpVerified, reason }) => {
     setDisabled(true);
     try {
       const res = await axios.get(
-        `http://localhost:3000/api/auth/verifyotp?code=${otp}`
+        `https://castwave-api-podcast.onrender.com/api/auth/verifyotp?code=${otp}`
       );
       // console.log(res.data);
       if (res.status === 200) {
