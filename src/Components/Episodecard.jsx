@@ -64,7 +64,7 @@ const Episodecard = ({ episode, podid, user, type, index }) => {
     try {
       // console.log(podid?._id);
       await axios.post(
-        `http://localhost:3000/api/podcast/addorview/${podid?._id}`
+        `https://castwave-api-podcast.onrender.com/api/podcast/addorview/${podid?._id}`
       );
       // console.log(res);
     } catch (error) {
