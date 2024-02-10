@@ -153,7 +153,7 @@ const PodcastCard = ({ podcast, user }) => {
     // console.log(user);
     try {
       const res = await axios.post(
-        "http://localhost:3000/api/podcast/favorites",
+        "https://castwave-api-podcast.onrender.com/api/podcast/favorites",
         {
           id: podcast._id,
         },
