@@ -57,7 +57,7 @@ const Favourites = () => {
   const { currentUser } = useSelector((state) => state.user);
   const getUser = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/api/users/", {
+      const res = await axios.get("https://castwave-api-podcast.onrender.com/api/users/", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
