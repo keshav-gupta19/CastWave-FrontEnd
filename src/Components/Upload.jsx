@@ -286,7 +286,7 @@ const Upload = ({ setUploadOpen }) => {
     try {
       setLoading(true);
       const res = await axios.post(
-        "http://localhost:3000/api/podcast/",
+        "https://castwave-api-podcast.onrender.com/api/podcast/",
         podcast,
         {
           headers: { Authorization: `Bearer ${token}` },
