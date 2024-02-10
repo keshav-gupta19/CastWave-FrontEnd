@@ -184,7 +184,7 @@ const Signin = ({ setSignUpOpen, setSignInOpen }) => {
       setDisabled(false);
       // console.log("hehehe");
       try {
-        const res = await axios.post("http://localhost:3000/api/auth/signin", {
+        const res = await axios.post("https://castwave-api-podcast.onrender.com/api/auth/signin", {
           email: email,
           password: password,
         });
@@ -285,7 +285,7 @@ const Signin = ({ setSignUpOpen, setSignInOpen }) => {
           }
         );
         // console.log(user);
-        const res = await axios.post("http://localhost:3000/api/auth/google", {
+        const res = await axios.post("https://castwave-api-podcast.onrender.com/api/auth/google", {
           name: user.data.name,
           email: user.data.email,
           img: user.data.picture,
@@ -356,7 +356,7 @@ const Signin = ({ setSignUpOpen, setSignInOpen }) => {
       setResettingPassword(true);
       try {
         const res = await axios.put(
-          "http://localhost:3000/api/auth/forgetPassword",
+          "https://castwave-api-podcast.onrender.com/api/auth/forgetPassword",
           {
             email,
             password: confirmedPassword,
@@ -397,7 +397,7 @@ const Signin = ({ setSignUpOpen, setSignInOpen }) => {
       setLoading(true);
       try {
         const res = await axios.get(
-          `http://localhost:3000/api/auth/findByEmail?email=${email}`
+          `https://castwave-api-podcast.onrender.com/api/auth/findByEmail?email=${email}`
         );
         if (res.status === 200) {
           // console.log("yaha tak sab sahi hai");
