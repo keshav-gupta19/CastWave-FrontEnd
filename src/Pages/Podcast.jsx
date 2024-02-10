@@ -143,7 +143,7 @@ const Podcast = () => {
   const getUser = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:3000/api/users/", {
+      const res = await axios.get("https://castwave-api-podcast.onrender.com/api/users/", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -166,7 +166,7 @@ const Podcast = () => {
     try {
       setLoading(true);
       const res = await axios.get(
-        `http://localhost:3000/api/podcast/get/${id}`
+        `https://castwave-api-podcast.onrender.com/api/podcast/get/${id}`
       );
       if (res.status === 200) {
         setPodcast(res.data);
@@ -188,7 +188,7 @@ const Podcast = () => {
       setLoading(true);
       if (podcast != undefined && podcast != null) {
         const res = await axios.post(
-          "http://localhost:3000/api/podcast/favorites",
+          "https://castwave-api-podcast.onrender.com/api/podcast/favorites",
           {
             id: podcast?._id,
           },
