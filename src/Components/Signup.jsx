@@ -191,7 +191,7 @@ const Signup = ({ setSignUpOpen, setSignInOpen }) => {
       setDisabled(true);
       setLoading(true);
       try {
-        const res = await axios.post("http://localhost:3000/api/auth/signup", {
+        const res = await axios.post("https://castwave-api-podcast.onrender.com/api/auth/signup", {
           name,
           email,
           password,
@@ -299,7 +299,7 @@ const Signup = ({ setSignUpOpen, setSignInOpen }) => {
             })
           );
         });
-      const res = await axios.post("http://localhost:3000/api/auth/google", {
+      const res = await axios.post("https://castwave-api-podcast.onrender.com/api/auth/google", {
         name: user.dat.name,
         email: user.data.email,
         img: user.data.picture,
