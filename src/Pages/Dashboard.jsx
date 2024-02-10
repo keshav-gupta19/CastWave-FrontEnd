@@ -76,7 +76,7 @@ const Dashboard = () => {
   const getPopularPodcast = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:3000/api/podcast/mostpopular"
+        "https://castwave-api-podcast.onrender.com/api/podcast/mostpopular"
       );
       setMostPopular(res.data);
       // console.log(res.data);
@@ -88,7 +88,7 @@ const Dashboard = () => {
   const getComedyPodcasts = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:3000/api/podcast/category?q=comedy`
+        `https://castwave-api-podcast.onrender.com/api/podcast/category?q=comedy`
       );
       setComedy(res.data);
       // console.log(res.data);
@@ -99,7 +99,7 @@ const Dashboard = () => {
   const getNewsPodcasts = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:3000/api/podcast/category?q=news`
+        `https://castwave-api-podcast.onrender.com/api/podcast/category?q=news`
       );
       setNews(res.data);
       // console.log(res.data);
@@ -110,7 +110,7 @@ const Dashboard = () => {
   const getSportsPodcasts = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:3000/api/podcast/category?q=sports`
+        `https://castwave-api-podcast.onrender.com/api/podcast/category?q=sports`
       );
       setSports(res.data);
       // console.log("hell", res.data);
@@ -121,7 +121,7 @@ const Dashboard = () => {
   const getCrimePodcasts = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:3000/api/podcast/category?q=crime`
+        `https://castwave-api-podcast.onrender.com/api/podcast/category?q=crime`
       );
       setCrime(res.data);
       // console.log(res.data);
@@ -132,7 +132,7 @@ const Dashboard = () => {
 
   const getUser = async () => {
     try {
-      const res = await axios.get(`http://localhost:3000/api/users/`, {
+      const res = await axios.get(`https://castwave-api-podcast.onrender.com/api/users/`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
